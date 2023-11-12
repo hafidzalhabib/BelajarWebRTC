@@ -13,6 +13,6 @@ st.set_page_config(
 )
 
 stream = webrtc_streamer(key = "coba",
-                         rtc_configuration={"iceServers": [{"urls": ["stun:stun2.l.google.com:19302"]}]
+                         rtc_configuration={"iceServers": [{"urls": ["stun:stun.sipnet.net:3478"]}]
                          }
                          )
