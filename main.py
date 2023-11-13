@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer
+from streamlit_webrtc import webrtc_streamer, WebRtcMode
 
 st.set_page_config(
     page_title="push up counter",
@@ -12,7 +12,7 @@ st.set_page_config(
     }
 )
 
-stream = webrtc_streamer(key = "coba",
+stream = webrtc_streamer(key = "coba", mode=WebRtcMode.SENDRECV,
                          rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
                          }
                          )
